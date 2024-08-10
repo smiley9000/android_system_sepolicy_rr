@@ -1,0 +1,10 @@
+# The ram_boost.sh script run by init.
+type ram_boost, domain;
+type ram_boost_exec, system_file_type, exec_type, file_type;
+
+# required permissions to run the script from init
+allow ram_boost shell_exec:file rx_file_perms;
+allow ram_boost system_file:file x_file_perms;
+allow ram_boost toolbox_exec:file rx_file_perms;
+
+allow ram_boost ram_boost_swap_file:file create_file_perms;

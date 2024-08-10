@@ -402,6 +402,7 @@
 /system/bin/evsmanagerd          u:object_r:evsmanagerd_exec:s0
 /system/bin/android\.automotive\.evs\.manager@1\.[0-9]+ u:object_r:evsmanagerd_exec:s0
 /system/bin/uprobestats           u:object_r:uprobestats_exec:s0
+/system/bin/ram_boost\.sh u:object_r:ram_boost_exec:s0
 
 #############################
 # Vendor files
@@ -764,6 +765,8 @@
 /data/incremental/MT_[^/]+/mount/.pending_reads         u:object_r:incremental_control_file:s0
 /data/incremental/MT_[^/]+/mount/.log                   u:object_r:incremental_control_file:s0
 /data/incremental/MT_[^/]+/mount/.blocks_written        u:object_r:incremental_control_file:s0
+
+/data/swap/swapfile u:object_r:ram_boost_swap_file:s0
 
 # Boot animation data
 /data/misc/bootanim(/.*)? u:object_r:bootanim_data_file:s0
