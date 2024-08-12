@@ -113,6 +113,12 @@ genfscon proc /vmstat u:object_r:proc_vmstat:s0
 genfscon proc /zoneinfo u:object_r:proc_zoneinfo:s0
 genfscon proc /vendor_sched u:object_r:proc_vendor_sched:s0
 
+# Ram boost
+genfscon proc /sys/vm/compaction_proactiveness u:object_r:proc_drop_caches:s0
+genfscon proc /sys/vm/extfrag_threshold u:object_r:proc_drop_caches:s0
+genfscon proc /sys/vm/swap_ratio u:object_r:proc_drop_caches:s0
+genfscon proc /sys/vm/swap_ratio_enable u:object_r:proc_drop_caches:s0
+
 genfscon fusectl / u:object_r:fusectlfs:s0
 
 # selinuxfs booleans can be individually labeled.
