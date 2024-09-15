@@ -123,3 +123,5 @@ allow init {
   -vm_manager_device_type
   -port_device
 }:chr_file setattr;
+
+allow init sysfs_batteryinfo:file rw_file_perms;
